@@ -1,0 +1,539 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <style>
+    /*! ADAPTED
+    Typeplate : Starter Kit
+    URL ........... http://typeplate.com
+    Version ....... 3.0.2
+    Github ........ https://github.com/typeplate/starter-kit
+    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+    License ....... Creative Commmons Attribution 3.0
+    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+    */
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-rendering: optimizeLegibility;
+      line-height: 1;
+      margin-top: 0;
+      color: #222;
+    }
+
+    blockquote+figcaption cite {
+      display: block;
+      font-size: inherit;
+      text-align: right;
+    }
+
+    body {
+      word-wrap: break-word;
+    }
+
+    pre code {
+      word-wrap: normal;
+    }
+
+    body {
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
+      color: #444;
+    }
+
+    h1 {
+      font-size: 2em;
+      /* 2*16 = 32 */
+    }
+
+    h2 {
+      font-size: 1.5em;
+      /* 1.5*16 = 24 */
+    }
+
+    h3 {
+      font-size: 1.17em;
+      /* 1.17*16 = 18.72 */
+    }
+
+    h4 {
+      font-size: 1em;
+      /* 1*16 = 16 */
+    }
+
+    h5 {
+      font-size: 0.83em;
+      /* 0.83*16 = 13.28 */
+    }
+
+    h6 {
+      font-size: 0.75em;
+      /* 0.75*16 = 12 */
+    }
+
+    h1 {
+      margin: 2.42424rem 0 1.454544rem;
+    }
+
+    h2 {
+      margin: 2.0202rem 0 1.21212rem;
+    }
+
+    h3 {
+      margin: 1.61616rem 0 1rem;
+    }
+
+    h4 {
+      margin: 1.21212rem 0 1;
+    }
+
+    h5 {
+      margin: 0.80808rem 0;
+    }
+
+    h6 {
+      margin: 0.70707rem 0;
+    }
+
+    p {
+      margin: auto auto 1.5rem;
+    }
+
+    small {
+      font-size: 65%;
+    }
+
+    input,
+    abbr,
+    acronym,
+    blockquote,
+    code,
+    kbd,
+    q,
+    samp,
+    var {
+      -webkit-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+    }
+
+    pre {
+      white-space: pre;
+    }
+
+    pre code {
+      white-space: -moz-pre-wrap;
+      white-space: pre-wrap;
+    }
+
+    code {
+      white-space: pre;
+      font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
+    }
+
+    abbr {
+      -webkit-font-variant: small-caps;
+      -moz-font-variant: small-caps;
+      -ms-font-variant: small-caps;
+      font-variant: small-caps;
+      font-weight: 600;
+      text-transform: lowercase;
+      color: gray;
+    }
+
+    abbr[title]:hover {
+      cursor: help;
+    }
+
+    /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      color: #444;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+    }
+
+    code,
+    pre {
+      background-color: #f5f5f5;
+      color: #444;
+      border-radius: 2px;
+      text-shadow: 0px 1px 0px white;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    }
+
+    pre code {
+      border: none;
+      box-shadow: none;
+    }
+
+    pre {
+      padding: 0.5em;
+    }
+
+    code {
+      display: inline-block;
+      padding: 0 0.5em;
+      line-height: 1.4;
+      font-size: 0.9em;
+    }
+
+    table {
+      border-spacing: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    table th,
+    table td {
+      padding: 0.3em 0.7em;
+    }
+
+    table th {
+      background-color: #f4f4f4;
+      border-bottom: 2px solid #444;
+    }
+
+    table td {
+      border: 1px solid #f5f5f5;
+    }
+
+    /* Add transition to containers so they can push in and out. */
+
+    #layout,
+    #menu,
+    .menu-link {
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -ms-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+    }
+
+    /* This is the parent `<div>` that contains the menu and the content area. */
+
+    #layout {
+      position: relative;
+      padding-left: 0;
+    }
+
+    #layout.active #menu {
+      left: 250px;
+      width: 250px;
+    }
+
+    #layout.active .menu-link {
+      left: 250px;
+    }
+
+    /* The content `<div>` is where all your content goes. */
+
+    .content {
+      margin: 50px auto;
+      padding: 0 2em;
+      max-width: 80ex;
+      line-height: 1.6em;
+    }
+
+    /*
+    The `#menu` `<div>` is the parent `<div>` that contains the menu that
+    appears on the left side of the page.
+    */
+
+    #menu {
+      margin-left: -250px;
+      /* "#menu" width */
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 1000;
+      /* so the menu or its navicon stays above all content */
+      background: #f4f4f4;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      font-size: 0.9em;
+    }
+
+    a,
+    a * {
+      text-decoration: none;
+      color: #2483cc;
+    }
+
+    a:visited {
+      text-decoration: none;
+      color: #2483cc;
+    }
+
+    /* All anchors inside the menu should be styled like this. */
+
+    #menu a {
+      display: block;
+      padding: 0.5em 0.5em;
+    }
+
+    #menu a:first-letter {
+      text-transform: capitalize;
+    }
+
+    #menu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 1em 0.5em;
+    }
+
+    #menu ul ul {
+      margin-top: 0.5em;
+      margin-left: 0.5em;
+      border-left: 4px solid rgba(255, 255, 255, 0.5);
+    }
+
+    /* Change color of the anchor links on hover/focus. */
+
+    #menu li a:hover,
+    #menu li a:focus {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    /* This styles the selected menu item `<li>`. */
+
+    #menu li a.active {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    /* This styles a link within a selected menu item `<li>`. */
+
+    #menu li a.active {
+      color: #222;
+    }
+
+    /* This styles the menu heading. */
+
+    #menu li.heading {
+      font-size: 0.9em;
+      text-transform: uppercase;
+      color: #000;
+    }
+
+    #menu li.heading>* {
+      padding: 0.5em;
+      display: block;
+    }
+
+    #menu li.heading a {
+      color: #0c68af;
+    }
+
+    /* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+    /*
+    `.menu-link` represents the responsive menu toggle that shows/hides on
+    small screens.
+    */
+
+    .menu-link {
+      position: fixed;
+      display: block;
+      /* show this only on small screens */
+      top: 0;
+      left: 0;
+      /* "#menu width" */
+      background: #f4f4f4;
+      font-size: 10px;
+      /* change this value to increase/decrease button size */
+      z-index: 10;
+      width: 2em;
+      height: auto;
+      padding: 1.6em 1.2em;
+      border-radius: 0 2px 2px 0;
+    }
+
+    .menu-link:hover {
+      background: /* #f4f4f4 * 0.8 */
+      #eee;
+    }
+
+    .menu-link span {
+      position: relative;
+      display: block;
+    }
+
+    .menu-link span,
+    .menu-link span:before,
+    .menu-link span:after {
+      background-color: #555;
+      width: 100%;
+      height: 0.2em;
+      border-radius: 1em;
+    }
+
+    .menu-link span:before,
+    .menu-link span:after {
+      position: absolute;
+      margin-top: -0.6em;
+      content: " ";
+    }
+
+    .menu-link span:after {
+      margin-top: 0.6em;
+    }
+
+    /* Hides the menu at `48em`, but modify this based on your app's needs. */
+
+    @media (min-width: 48em) {
+
+      .header,
+      .content {
+        padding-left: 2em;
+        padding-right: 2em;
+      }
+
+      #layout {
+        padding-left: 250px;
+        /* left col width "#menu" */
+        left: 0;
+      }
+      #menu {
+        left: 250px;
+      }
+
+      .menu-link {
+        position: fixed;
+        left: 250px;
+        display: none;
+      }
+
+      #layout.active .menu-link {
+        left: 250px;
+      }
+    }
+
+    @media (max-width: 48em) {
+      /* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left:
+       * Make the window small.
+       * Tap the menu to trigger the active state.
+       * Make the window large again.
+       */
+      #layout.active {
+        position: relative;
+        left: 250px;
+      }
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+      <!-- Hamburger icon -->
+      <span></span>
+    </a>
+    <nav id="menu">
+      <ul>
+<li><a class="" href="1.1 教程简介.html">1.1 教程简介</a></li>
+<li><a class="active" href="1.2 基础知识 -- 后端.html">1.2 基础知识    后端</a></li>
+<li class="heading"><span>1.3 NodeJS 入门</span></li>
+<ul>
+<li><a class="" href="1.3 NodeJS 入门\1.3.1 NodeJS 基础.html">1.3.1 NodeJS 基础</a></li>
+<li><a class="" href="1.3 NodeJS 入门\1.3.2 代码的组织和部署.html">1.3.2 代码的组织和部署</a></li>
+<li><a class="" href="1.3 NodeJS 入门\1.3.3 文件操作.html">1.3.3 文件操作</a></li>
+<li><a class="" href="1.3 NodeJS 入门\1.3.4 网络操作.html">1.3.4 网络操作</a></li>
+<li><a class="" href="1.3 NodeJS 入门\1.3.5 进程管理.html">1.3.5 进程管理</a></li>
+<li><a class="" href="1.3 NodeJS 入门\1.3.6 异步编程.html">1.3.6 异步编程</a></li>
+</ul>
+<li class="heading"><span>1.4 Mongodb 入门</span></li>
+<ul>
+<li><a class="" href="1.4 Mongodb 入门\1.4.1 MongoDB 基础.html">1.4.1 MongoDB 基础</a></li>
+<li><a class="" href="1.4 Mongodb 入门\1.4.2 进行简单的增删改查.html">1.4.2 进行简单的增删改查</a></li>
+<li><a class="" href="1.4 Mongodb 入门\1.4.3 索引.html">1.4.3 索引</a></li>
+</ul>
+</ul>
+    </nav>
+    <article id="main" class="content">
+      <h1>1.2 基础知识 – 后端</h1>
+<h1>1.2.1 为什么要学习后端</h1>
+<p>后端作为当下的互联网环境中扮演着不可或缺的地位，比如你现在正在浏览的“火花空间”中的文章，就是在你向后端发出请求之后，后端经过一定的处理返回给浏览器才能展示到你的面前。如果没有了后端，你就可以看到一个熟悉的404 Not Found错误。</p>
+<p>当前一个常见的前后端分离的网站由以下三个部分组成：</p>
+<ul>
+<li><strong>前端</strong> 用户操作的界面，常见的前端有：浏览器，微信小程序等等。他们包含了用户能够看到所有东西，表单、按钮、图片、文字以及动画。前端页面通常使用HTML、CSS、JS以及他们的变体进行编写。</li>
+<li><strong>后端</strong> 用以处理无法在、或者不方便在前端进行的操作，通常是文件的存储，用户权限校验，信息和数据的存储等等。后端程序则以使用大部分流行的语言进行编写，基本没有什么限制，为了降低学习语言的数量，我们可以选择使用JS进行后台的编写。</li>
+<li><strong>数据库</strong> 大量的数据要按照一定的结构存放在数据库中，方便后端在需要的时候进行调用。常见的数据库有：Mysql，MongoDB，SQL server。在本次教程中，我们采用和JS关系最为密切的MongoDB作为我们的数据库。</li>
+</ul>
+<p>可见，我们所需要编写的后端是一个承上启下的存在，需要将前端请求的数据从数据库中查找出来，翻译成前端需要的格式并返回，或是将前端提交的数据按照编写程序时对于数据库的格式存储到数据库中。最简单的一个登录和注销的操作就需要用到后端查询用户输入的密码是否正确，因为我们不可能将所有用户的密码都明文存储在前端，这样太危险了。</p>
+<h1>1.2.2 留言板原形展示+功能描述</h1>
+<p>在本次实验的进阶部分，我们要发布一个完整可用的微信小程序。原型如下图，它包括几个功能：</p>
+<ul>
+<li><strong>登录</strong> 调用微信提供的登录接口进行登录，并获得用户的头像和昵称，用作留言板的显示。</li>
+<li><strong>查看留言</strong> 调用后端提供的接口，我们可以按照时间顺序，看到所有使用这个小程序的人发表的留言。</li>
+<li><strong>喜欢</strong> 对于你觉得有兴趣的留言，你可以点击“喜欢”按钮，为你喜欢的留言点赞。</li>
+<li><strong>评论</strong> 对你深受启发的留言，你可以在这条留言下面评论，或者查看别人的留言。</li>
+<li><strong>发表</strong> 如果你也想上留言版，你也可以自己发布留言。</li>
+</ul>
+<p><img src="img/1.2.2%E5%8E%9F%E5%9E%8B%E5%9B%BE.jpg" alt="1.2.2 原型图"></p>
+<!-- TODO: 这里需要更换成最终的效果图 -->
+<h1>1.2.3 小节总结+测试</h1>
+<p>本节介绍了表单的概念和用途，并描述了一个前后端开发的答题思路。在第2章开发实战的进阶部分，我们将实际上手，体验开发这个小程序。</p>
+<p>完成本节学习的同学，请认真完成本节测试。完成答题后，可查看答案解析，仍有疑惑可点击右边👉悬浮框中的“提问”，及时询问教师和助教。</p>
+
+    </article>
+  </div>
+  <script>
+    // Load contents.json if you need it
+  </script>
+  <script>
+    // FROM http://purecss.io/js/ui.js
+    (function (window, document) {
+
+      var layout = document.getElementById('layout'),
+        menu = document.getElementById('menu'),
+        menuLink = document.getElementById('menuLink');
+
+      function toggleClass(element, className) {
+        var classes = element.className.split(/\s+/),
+          length = classes.length,
+          i = 0;
+
+        for (; i < length; i++) {
+          if (classes[i] === className) {
+            classes.splice(i, 1);
+            break;
+          }
+        }
+        // The className is not found
+        if (length === classes.length) {
+          classes.push(className);
+        }
+
+        element.className = classes.join(' ');
+      }
+
+      menuLink.onclick = function (e) {
+        var active = 'active';
+
+        e.preventDefault();
+        toggleClass(layout, active);
+        toggleClass(menu, active);
+        toggleClass(menuLink, active);
+      };
+
+    }(this, this.document));
+  </script>
+</body>
+
+</html>
