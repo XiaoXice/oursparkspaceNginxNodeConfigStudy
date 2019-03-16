@@ -1,0 +1,228 @@
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+
+.tabbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 8%;
+  bottom: 0;
+  position: fixed;
+  border-top: 1px solid #e5e5e5;
+  font-size: 50rpx;
+}
+
+.green {
+  color: green;
+}
+
+.black {
+  color: black;
+}
+
+.red {
+  color: #d81e06;
+}
+
+.gray {
+  color: #707070;
+}
+
+.blue {
+  color: blue;
+}
+
+.tabpage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 70%;
+  width: 50%;
+  height: 100%;
+}
+
+.left {
+  border-right: 1rpx solid #e5e5e5;
+}
+
+.content {
+  position: fixed;
+  width: 100%;
+  height: 92%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.log-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 40rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid black;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.title_ava {
+  border-radius: 50%;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.title_name {
+  padding-left: 30rpx;
+  font-size: 25rpx;
+}
+
+.desc {
+  padding-top: 30rpx;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.zan_comm {
+  padding: 40rpx 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.zan {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.zan_pic {
+  width: 40rpx;
+  height: 40rpx;
+  padding-right: 10rpx;
+}
+
+.zan_num {
+  font-size: 25rpx;
+  padding-right: 40rpx;
+}
+
+.comm_pic {
+  width: 40rpx;
+  height: 40rpx;
+  padding-right: 40rpx;
+}
+
+.log_list {
+  padding-top: 20rpx;
+  background-color: lightgray;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.zan_list {
+  width: 100%;
+  border-bottom: 1rpx solid darkgray;
+  word-wrap: break-word;
+  padding-bottom: 20rpx;
+}
+
+.comm_list {
+  padding-top: 20rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.comments-item {
+  width: 100%;
+  padding-bottom: 20rpx;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+
+.comm_form {
+  width: 100%;
+  height: 8%;
+  bottom: 0;
+  position: fixed;
+  border-top: 1px solid #e5e5e5;
+}
+
+.comm_box {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 50rpx;
+}
+
+.btn {
+  background-color: yellowgreen;
+  width: 20%;
+  font-size: 30rpx;
+}
+
+.comm_input_box {
+  width: 70%;
+  font-size: 40rpx;
+  padding-left: 40rpx
+}
+
+.input {
+  height: 5%;
+  width: 85%;
+  position: fixed;
+  top: 30%;
+  left: 7%;
+  border: 1px solid black;
+  border-radius: 15rpx;
+  padding-left: 20rpx;
+}
+
+.button-style-demo1 {
+  position: fixed;
+  width: 84%;
+  left: 8%;
+  top: 42%;
+  background-color: #c01920;
+  border-radius: 20px;
+  border-color: #c01920;
+  box-shadow: 3px 3px 8px #e57a7e;
+  color: #fff;
+}
+
+.whether {
+  position: fixed;
+  width: 100%;
+  height: 10%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.whe_text {
+  padding-left: 40rpx;
+  font-size: 30rpx;
+}

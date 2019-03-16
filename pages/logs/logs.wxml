@@ -1,0 +1,85 @@
+<!--logs.wxml-->
+<view class="container log-list">
+  <scroll-view class="content"
+  bindscrolltolower="bindDownLoad" bindscrolltoupper="topLoad" bindscroll="scroll"
+  scroll-top="{{scrollTop}}" scroll-y="true" hidden="{{tab != 1}}">
+    <block wx:for="{{logs}}" wx:for-item="log">
+      <view class="log-item">
+
+        <view class="title">
+          <image class="title_ava" src='{{log.author.avatarUrl}}'></image>
+          <view class="title_name">{{log.author.nickName}}</view>
+        </view>
+
+        <view class="desc">{{log.content}}</view>
+
+        <view class='zan_comm'>
+          <view class="zan" bindtap='dianzan' data-index='{{index}}'>
+            <image class="zan_pic" wx:if="{{!log.liked}}" src='/images/weizan.png'></image>
+            <image class="zan_pic" wx:if="{{log.liked}}" src='/images/yizan.png'></image>
+            <view class="zan_num {{log.liked ? 'red' :  'gray'}}">{{log.like.length}}</view>
+          </view>
+          <image class='comm_pic' src='/images/comment.png' bindtap='comment' data-index='{{index}}'></image>
+        </view>
+
+        <view class="log_list">
+
+          <view class="zan_list">
+            <text wx:for="{{log.like}}" wx:for-item="liker">
+              {{liker.nickName}}
+            </text>
+          </view>
+
+          <view wx:if="{{log.commitList[0] && log.commitList[0].author}}" class="comm_list">
+            <block wx:for="{{log.commitList}}" wx:for-item="comment">
+              <view class="comments-item">
+                <text class='blue'>{{comment.author.nickName}}</text> : {{comment.content}}
+              </view>
+            </block>
+          </view>
+
+        </view>
+
+      </view>
+    </block>
+  </scroll-view>
+
+  <view class="content" hidden="{{tab != 2}}">
+
+    <view class='whether'>
+      <view class='whe_text'>{{whether.place}}</view>
+      <view class='whe_text'>{{whether.text}}</view>
+      <view class='whe_text'>{{whether.temperature}} ℃</view>
+    </view>
+
+    <form bindsubmit="formSubmit">
+
+      <input name="input_content" value="{{input}}" class="input" placeholder="请输入文字"></input>
+
+      <button class="button-style-demo1" formType="submit" disabled="{{btn_disabled}}">发布朋友圈</button>
+
+    </form>
+
+  </view>
+
+  <view class="tabbar">
+
+    <view class="left tabpage {{tab == 1 ?  'green' : 'black'}}" bindtap="selectOne">
+      查看
+    </view>
+
+    <view class="tabpage {{tab == 2 ?  'green' : 'black'}}" bindtap="selectTwo">
+      发布
+    </view>
+
+  </view>
+
+  <form hidden="{{comm_input}}" class='comm_form' bindsubmit="submitComment">
+    <view class='comm_box'>
+      <input class='comm_input_box' bindblur='blur' focus='{{focus}}' cursor-spacing='10' name="comm_name" value="{{comment_input_value}}" placeholder="评论"></input>
+
+      <button class='btn' formType="submit" disabled="{{comment_btn_disabled}}">确定</button>
+    </view>
+  </form>
+
+</view>
