@@ -1,0 +1,35 @@
+{
+  "name": "mybackend",
+  "version": "1.0.0",
+  "description": "A backend of wechat mini programe.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/XiaoXice/LearnKoa-server.git"
+  },
+  "keywords": [
+    "learn",
+    "koa",
+    "weichatmini"
+  ],
+  "author": "xice <admin@xice.wang>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/XiaoXice/LearnKoa-server/issues"
+  },
+  "homepage": "https://github.com/XiaoXice/LearnKoa-server#readme",
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-body": "^4.1.0",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "koa-session2": "^2.2.8",
+    "koa2-cors": "^2.0.6",
+    "mongoose": "^5.4.19",
+    "request": "^2.88.0",
+    "sha1": "^1.1.1"
+  }
+}
