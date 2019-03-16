@@ -1,0 +1,20 @@
+{
+  "name": "newNginx",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/XiaoXice/oursparkspaceNginxNodeConfigStudy.git",
+  "author": "xice09 <liangxiao09@163.com>",
+  "license": "MIT",
+  "dependencies": {
+    "markdown-it-task-lists": "^2.1.1",
+    "vuepress": "^0.14.10"
+  },
+  "resolutions": {
+    "webpack-dev-middleware": "3.6.0"
+  },
+  "scripts": {
+    "start": "vuepress dev",
+    "build": "vuepress build",
+    "deploy": "bash deploy.sh"
+  }
+}

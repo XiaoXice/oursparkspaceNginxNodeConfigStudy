@@ -1,1 +1,0 @@
-<script>window.location.href='./1.1 教程简介.html';</script>

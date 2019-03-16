@@ -1,2 +1,5 @@
 _doc
 src
+node_modules
+yarn.lock
+.vuepress/dist
