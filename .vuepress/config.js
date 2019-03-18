@@ -7,7 +7,9 @@ module.exports={
         nav:[
             {text:'主页',link:'/'},
             {text:'基础知识',link:'/Basic/'},
-            {text:'实践环节',link:'/practice/'},
+            {text:'后端实践-koa',link:'/practice-koa/'},
+            {text:'后端实践-express',link:'/practice-express/'},
+            {text:'微信小程序前端',link:'/front/'},
         ],
         sidebar:{
             "/Basic/": [
@@ -35,33 +37,39 @@ module.exports={
                     ]
                 }
             ],
-            "/practice/": [
+            "/practice-koa/": [
                 {
                     title: "2.1 后端分模块实践",
                     collapsable: false,
                     children:[
-                       "/practice/2.1 后端分模块实践/2.1 后端整体设计",
-                       "/practice/2.1 后端分模块实践/2.1.1 Mongoose 实战",
-                       "/practice/2.1 后端分模块实践/2.1.2 Koa 实战"
+                       "/practice-koa/2.1 后端分模块实践/2.1 后端整体设计",
+                       "/practice-koa/2.1 后端分模块实践/2.1.1 Mongoose 实战",
+                       "/practice-koa/2.1 后端分模块实践/2.1.2 Koa 实战"
                     ]
                 },{
                     title: "2.2 后端架构",
                     collapsable: false,
                     children:[
-                        "/practice/2.2 后端架构/2.2 后端架构",
-                        "/practice/2.2 后端架构/2.2.1 Koa抬手式",
-                        "/practice/2.2 后端架构/2.2.2 Mongoose静态方法构建",
-                        "/practice/2.2 后端架构/2.2.3 Koa路由和业务逻辑",
-                        "/practice/2.2 后端架构/2.2.4 开发调试"
-                    ]
-                },{
-                    title: "2.3 微信小程序配套简介",
-                    collapsable: false,
-                    children:[
-                        "/practice/2.3 微信小程序配套简介/2.3 微信小程序配套简介",
-                        "/practice/2.3 微信小程序配套简介/2.3.1 前端的分层架构",
+                        "/practice-koa/2.2 后端架构/2.2.1 Koa抬手式",
+                        "/practice-koa/2.2 后端架构/2.2.2 Mongoose静态方法构建",
+                        "/practice-koa/2.2 后端架构/2.2.3 Koa路由和业务逻辑",
+                        "/practice-koa/2.2 后端架构/2.2.4 开发调试"
                     ]
                 }
+            ],
+            "/practice-express/": [
+                {
+                    title: "2.1 后端分模块实践",
+                    collapsable: false,
+                    children:[
+                       "/practice-express/2.1 后端分模块实践/2.1 后端整体设计",
+                       "/practice-express/2.1 后端分模块实践/2.1.1 Mongoose 实战",
+                       "/practice-express/2.1 后端分模块实践/2.1.2 express 实战"
+                    ]
+                },
+            ],
+            "/front/": [
+                "/front/3.2 前端的数据接口"
             ]
         },
         sidebarDepth: 2,

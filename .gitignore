@@ -3,3 +3,4 @@ src
 node_modules
 yarn.lock
 .vuepress/dist
+package-lock.json
