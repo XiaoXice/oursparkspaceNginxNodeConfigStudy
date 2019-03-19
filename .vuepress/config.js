@@ -67,9 +67,14 @@ module.exports={
                        "/practice-express/2.1 后端分模块实践/2.1.2 express 实战"
                     ]
                 },
+                "/practice-expres/2.2 后端代码编写"
             ],
             "/front/": [
                 "/front/3.2 前端的数据接口"
+            ],
+            "/deploy/":[
+                "/deploy/4.1 硬件资源的准备工作",
+                "/deploy/4.2 远程服务器连接"
             ]
         },
         sidebarDepth: 2,
