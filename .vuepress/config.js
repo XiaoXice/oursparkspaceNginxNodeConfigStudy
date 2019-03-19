@@ -10,6 +10,7 @@ module.exports={
             {text:'后端实践-koa',link:'/practice-koa/'},
             {text:'后端实践-express',link:'/practice-express/'},
             {text:'微信小程序前端',link:'/front/'},
+            {text:'代码部署',link:'/deploy/'},
         ],
         sidebar:{
             "/Basic/": [
