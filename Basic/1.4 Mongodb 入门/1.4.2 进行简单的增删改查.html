@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>1.4.2 进行简单的增删改查 | 平台开发文档</title>
+    <meta name="description" content="为了更好的开发">
+    <script type="text/javascript" src="https://s96.cnzz.com/z_stat.php?id=1276670037&amp;web_id=1276670037"></script>
+    
+    <link rel="preload" href="/oursparkspaceNginxNodeConfigStudy/assets/css/0.styles.3c3bcc60.css" as="style"><link rel="preload" href="/oursparkspaceNginxNodeConfigStudy/assets/js/app.fa70d2ae.js" as="script"><link rel="preload" href="/oursparkspaceNginxNodeConfigStudy/assets/js/17.4489aa77.js" as="script"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/10.681ecf30.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/11.271da7e0.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/12.a58c2c56.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/13.f9f6f205.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/14.bfc83ea4.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/15.b52eb4d1.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/16.022d542d.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/18.370a1b3a.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/19.0bd99501.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/2.7e54c8c4.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/20.e5f3565c.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/21.c46405c7.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/22.c07155e9.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/23.1fcd985e.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/24.dea88fe5.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/25.ac9a030b.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/26.a9450606.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/27.be4f713b.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/28.da5d0cfe.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/29.6243f02e.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/3.992ff33a.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/30.20d154a6.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/31.c2f0a0f7.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/32.4e54a1bf.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/33.f2b3d619.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/34.5badc128.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/35.ed762a5b.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/4.11cb110e.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/5.5753e940.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/6.e76a401f.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/7.9cc00c44.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/8.01b35c84.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/9.d28ea21d.js">
+    <link rel="stylesheet" href="/oursparkspaceNginxNodeConfigStudy/assets/css/0.styles.3c3bcc60.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/oursparkspaceNginxNodeConfigStudy/" class="home-link router-link-active"><!----> <span class="site-name">平台开发文档</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/oursparkspaceNginxNodeConfigStudy/" class="nav-link">主页</a></div><div class="nav-item"><a href="/oursparkspaceNginxNodeConfigStudy/Basic/" class="nav-link router-link-active">基础知识</a></div><div class="nav-item"><a href="/oursparkspaceNginxNodeConfigStudy/practice-koa/" class="nav-link">后端实践-koa</a></div><div class="nav-item"><a href="/oursparkspaceNginxNodeConfigStudy/practice-express/" class="nav-link">后端实践-express</a></div><div class="nav-item"><a href="/oursparkspaceNginxNodeConfigStudy/front/" class="nav-link">微信小程序前端</a></div><div class="nav-item"><a href="/oursparkspaceNginxNodeConfigStudy/deploy/" class="nav-link">代码部署</a></div> <a href="https://github.com/XiaoXice/oursparkspaceNginxNodeConfigStudy" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/oursparkspaceNginxNodeConfigStudy/" class="nav-link">主页</a></div><div class="nav-item"><a href="/oursparkspaceNginxNodeConfigStudy/Basic/" class="nav-link router-link-active">基础知识</a></div><div class="nav-item"><a href="/oursparkspaceNginxNodeConfigStudy/practice-koa/" class="nav-link">后端实践-koa</a></div><div class="nav-item"><a href="/oursparkspaceNginxNodeConfigStudy/practice-express/" class="nav-link">后端实践-express</a></div><div class="nav-item"><a href="/oursparkspaceNginxNodeConfigStudy/front/" class="nav-link">微信小程序前端</a></div><div class="nav-item"><a href="/oursparkspaceNginxNodeConfigStudy/deploy/" class="nav-link">代码部署</a></div> <a href="https://github.com/XiaoXice/oursparkspaceNginxNodeConfigStudy" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/oursparkspaceNginxNodeConfigStudy/Basic/1.1 教程简介.html" class="sidebar-link">1.1 教程简介</a></li><li><a href="/oursparkspaceNginxNodeConfigStudy/Basic/1.2 基础知识 -- 后端.html" class="sidebar-link">1.2 基础知识 -- 后端</a></li><li><div class="sidebar-group"><p class="sidebar-heading"><span>1.3 NodeJS入门</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/oursparkspaceNginxNodeConfigStudy/Basic/1.3 NodeJS 入门/1.3.1 NodeJS 基础.html" class="sidebar-link">1.3.1 NodeJS 基础</a></li><li><a href="/oursparkspaceNginxNodeConfigStudy/Basic/1.3 NodeJS 入门/1.3.2 代码的组织和部署.html" class="sidebar-link">1.3.2 代码的组织和部署</a></li><li><a href="/oursparkspaceNginxNodeConfigStudy/Basic/1.3 NodeJS 入门/1.3.3 文件操作.html" class="sidebar-link">1.3.3 文件操作</a></li><li><a href="/oursparkspaceNginxNodeConfigStudy/Basic/1.3 NodeJS 入门/1.3.4 网络操作.html" class="sidebar-link">1.3.4 网络操作</a></li><li><a href="/oursparkspaceNginxNodeConfigStudy/Basic/1.3 NodeJS 入门/1.3.5 进程管理.html" class="sidebar-link">1.3.5 进程管理</a></li><li><a href="/oursparkspaceNginxNodeConfigStudy/Basic/1.3 NodeJS 入门/1.3.6 异步编程.html" class="sidebar-link">1.3.6 异步编程</a></li><li><a href="/oursparkspaceNginxNodeConfigStudy/Basic/1.3 NodeJS 入门/1.3.7 Promise和async await.html" class="sidebar-link">1.3.7 Promise和async await</a></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading open"><span>1.4 Mongodb 入门</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/oursparkspaceNginxNodeConfigStudy/Basic/1.4 Mongodb 入门/1.4.1 MongoDB 基础.html" class="sidebar-link">1.4.1 MongoDB 基础</a></li><li><a href="/oursparkspaceNginxNodeConfigStudy/Basic/1.4 Mongodb 入门/1.4.2 进行简单的增删改查.html" class="active sidebar-link">1.4.2 进行简单的增删改查</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/oursparkspaceNginxNodeConfigStudy/Basic/1.4 Mongodb 入门/1.4.2 进行简单的增删改查.html#显示所有的数据库" class="sidebar-link">显示所有的数据库</a></li><li class="sidebar-sub-header"><a href="/oursparkspaceNginxNodeConfigStudy/Basic/1.4 Mongodb 入门/1.4.2 进行简单的增删改查.html#显示当前数据库" class="sidebar-link">显示当前数据库</a></li><li class="sidebar-sub-header"><a href="/oursparkspaceNginxNodeConfigStudy/Basic/1.4 Mongodb 入门/1.4.2 进行简单的增删改查.html#切换-新建数据库" class="sidebar-link">切换/新建数据库</a></li><li class="sidebar-sub-header"><a href="/oursparkspaceNginxNodeConfigStudy/Basic/1.4 Mongodb 入门/1.4.2 进行简单的增删改查.html#创建集合" class="sidebar-link">创建集合</a></li><li class="sidebar-sub-header"><a href="/oursparkspaceNginxNodeConfigStudy/Basic/1.4 Mongodb 入门/1.4.2 进行简单的增删改查.html#查询所有的集合" class="sidebar-link">查询所有的集合</a></li><li class="sidebar-sub-header"><a href="/oursparkspaceNginxNodeConfigStudy/Basic/1.4 Mongodb 入门/1.4.2 进行简单的增删改查.html#在集合中插入一个文档" class="sidebar-link">在集合中插入一个文档</a></li><li class="sidebar-sub-header"><a href="/oursparkspaceNginxNodeConfigStudy/Basic/1.4 Mongodb 入门/1.4.2 进行简单的增删改查.html#查询当前集合下所有文档" class="sidebar-link">查询当前集合下所有文档</a></li><li class="sidebar-sub-header"><a href="/oursparkspaceNginxNodeConfigStudy/Basic/1.4 Mongodb 入门/1.4.2 进行简单的增删改查.html#插入一些练习数据" class="sidebar-link">插入一些练习数据</a></li><li class="sidebar-sub-header"><a href="/oursparkspaceNginxNodeConfigStudy/Basic/1.4 Mongodb 入门/1.4.2 进行简单的增删改查.html#查询-格式化输出" class="sidebar-link">查询 -- 格式化输出</a></li><li class="sidebar-sub-header"><a href="/oursparkspaceNginxNodeConfigStudy/Basic/1.4 Mongodb 入门/1.4.2 进行简单的增删改查.html#查询-指定条件进行查询" class="sidebar-link">查询 -- 指定条件进行查询</a></li><li class="sidebar-sub-header"><a href="/oursparkspaceNginxNodeConfigStudy/Basic/1.4 Mongodb 入门/1.4.2 进行简单的增删改查.html#更新" class="sidebar-link">更新</a></li><li class="sidebar-sub-header"><a href="/oursparkspaceNginxNodeConfigStudy/Basic/1.4 Mongodb 入门/1.4.2 进行简单的增删改查.html#删除" class="sidebar-link">删除</a></li><li class="sidebar-sub-header"><a href="/oursparkspaceNginxNodeConfigStudy/Basic/1.4 Mongodb 入门/1.4.2 进行简单的增删改查.html#排序" class="sidebar-link">排序</a></li></ul></li><li><a href="/oursparkspaceNginxNodeConfigStudy/Basic/1.4 Mongodb 入门/1.4.3 索引.html" class="sidebar-link">1.4.3 索引</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="进行简单的增删改查"><a href="#进行简单的增删改查" aria-hidden="true" class="header-anchor">#</a> 进行简单的增删改查</h1> <p>你刚刚安装完成的MongoDB其中包括两个常用的软件。如果你使用默认目录安装，可以打开<code>C:\Program Files\MongoDB\Server\[Version]\bin</code>进行查看，其中的[Version]代表的是你的大版本号，4.0.x都统一记作4.0，同理3.0.x统一记作3.0。</p> <p>C:\Program Files\MongoDB\Server[Version]
+- \bin
+- mongo.exe    # MongoDB的命令行工具，可以用来连接和管理MongoDB服务器(不仅限于本地)。
+- mongod.exe   # MongoDB服务器主程序，用来响应所有客户端的连接和请求，并对数据库文件进行操作。
+...
+...</p> <p>使用在<code>/bin</code>目录下使用控制台，键入<code>mongo</code>，他就会尝试连接本地的27017(MongoDB服务的默认端口号)，如果你的服务器正常启动，那么就可以看到如下的情况：</p> <p><img src="img%5C1.4.1Mongo%E8%BF%9E%E6%8E%A5%E6%88%90%E5%8A%9F.jpg" alt="1.4.1 Mongo连接成功"></p> <p>接下来我们就可以进行各种操作了。</p> <p><strong>提示：</strong> 启动Mongo之后，你实际上到了Mongo自带的JS解释器环境，在这里你可以使用各种JS语言的特性。并且支持命令的Tab补全，命令只要输入一部分，点击Tab键就可以补全，如果没有效果就点两下，会列出所有可能的组合。</p> <h2 id="显示所有的数据库"><a href="#显示所有的数据库" aria-hidden="true" class="header-anchor">#</a> 显示所有的数据库</h2> <p>没有任何内容的数据库不会显示，下面的数据库都是MongoDB的自身配置，建议不要随意更改。</p> <pre><code>&gt; show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+</code></pre> <h2 id="显示当前数据库"><a href="#显示当前数据库" aria-hidden="true" class="header-anchor">#</a> 显示当前数据库</h2> <pre><code>&gt; db
+test
+</code></pre> <h2 id="切换-新建数据库"><a href="#切换-新建数据库" aria-hidden="true" class="header-anchor">#</a> 切换/新建数据库</h2> <p>如果数据库不存在则新建</p> <pre><code>&gt; use test                   # 切换数据库
+switched to db test
+&gt; use learnMongodb           # 新建一个叫做`learnMongodb`的数据库
+switched to db learnMongodb
+&gt; db
+learnMongodb
+</code></pre> <h2 id="创建集合"><a href="#创建集合" aria-hidden="true" class="header-anchor">#</a> 创建集合</h2> <pre><code>&gt; db.createCollection(&quot;HelloWorld&quot;)
+{ &quot;ok&quot; : 1 }
+</code></pre> <h2 id="查询所有的集合"><a href="#查询所有的集合" aria-hidden="true" class="header-anchor">#</a> 查询所有的集合</h2> <pre><code>&gt; show collections
+HelloWorld
+</code></pre> <h2 id="在集合中插入一个文档"><a href="#在集合中插入一个文档" aria-hidden="true" class="header-anchor">#</a> 在集合中插入一个文档</h2> <pre><code>&gt; db.HelloWorld.insert({Hello: &quot;world!&quot;})
+WriteResult({ &quot;nInserted&quot; : 1 })
+</code></pre> <p>当然你也可以在不创建集合的情况下直接创建文档，这会根据你的方式自动生成你要的文档。</p> <pre><code>&gt; db.areYouOK.insert({ILove: &quot;BUPT&quot;, and: &quot;SICE&quot;})
+WriteResult({ &quot;nInserted&quot; : 1 })
+</code></pre> <h2 id="查询当前集合下所有文档"><a href="#查询当前集合下所有文档" aria-hidden="true" class="header-anchor">#</a> 查询当前集合下所有文档</h2> <pre><code>&gt; db.HelloWorld.find()
+{ &quot;_id&quot; : ObjectId(&quot;5c88e87ef1deddeb125f7a16&quot;), &quot;Hello&quot; : &quot;world!&quot; }
+&gt; db.areYouOK.find()
+{ &quot;_id&quot; : ObjectId(&quot;5c88e966f1deddeb125f7a17&quot;), &quot;ILove&quot; : &quot;BUPT&quot;, &quot;and&quot; : &quot;SICE&quot; }
+</code></pre> <h2 id="插入一些练习数据"><a href="#插入一些练习数据" aria-hidden="true" class="header-anchor">#</a> 插入一些练习数据</h2> <p>此时请各位随意插入一些数据进行练习。比如我们建立一个简单的通讯录(mailList)</p> <table><thead><tr><th style="text-align:center">name</th> <th style="text-align:center">gender</th> <th style="text-align:center">age</th> <th style="text-align:center">email</th></tr></thead> <tbody><tr><td style="text-align:center">Bob</td> <td style="text-align:center">Male</td> <td style="text-align:center">18</td> <td style="text-align:center">bob@sinla.com</td></tr> <tr><td style="text-align:center">Lili</td> <td style="text-align:center">Female</td> <td style="text-align:center">20</td> <td style="text-align:center">lili@jojo.org</td></tr> <tr><td style="text-align:center">Tom</td> <td style="text-align:center">Male</td> <td style="text-align:center">16</td> <td style="text-align:center">tom@sinla.com</td></tr> <tr><td style="text-align:center">Jerry</td> <td style="text-align:center">Male</td> <td style="text-align:center">15</td> <td style="text-align:center">jerr@bupt.com</td></tr> <tr><td style="text-align:center">Jenny</td> <td style="text-align:center">Female</td> <td style="text-align:center">16</td> <td style="text-align:center">jenn@bupt.com</td></tr></tbody></table> <p>当然你可以选择一条一条插入如下：</p> <pre><code>&gt; db.mailList.insert({name:&quot;Bob&quot;, gender:&quot;Male&quot;, age: 18 ,email:&quot;bob@sinla.com&quot; })
+&gt; db.mailList.insert({name:&quot;Lili&quot;, gender:&quot;Female&quot;, age: 20 ,email:&quot;lili@jojo.org&quot; })
+&gt; db.mailList.insert({name:&quot;Tom&quot;, gender:&quot;Male&quot;, age: 16 ,email:&quot;tom@sinla.com&quot; })
+&gt; db.mailList.insert({name:&quot;Jerry&quot;, gender:&quot;Male&quot;, age: 15 ,email:&quot;jerr@bupt.com&quot; })
+&gt; db.mailList.insert({name:&quot;Jenny&quot;, gender:&quot;Female&quot;, age: 16 ,email:&quot;jenn@bupt.com&quot; })
+</code></pre> <p>当然你也可以选择构建一个数组一下子全插入</p> <pre><code>&gt; db.mailList.insert([{name:&quot;Bob&quot;, gender:&quot;Male&quot;, age: 18 ,email:&quot;bob@sinla.com&quot; },
+...{name:&quot;Lili&quot;, gender:&quot;Female&quot;, age: 20 ,email:&quot;lili@jojo.org&quot; },
+...{name:&quot;Tom&quot;, gender:&quot;Male&quot;, age: 16 ,email:&quot;tom@sinla.com&quot; },
+...{name:&quot;Jerry&quot;, gender:&quot;Male&quot;, age: 15 ,email:&quot;jerr@bupt.com&quot; },
+...{name:&quot;Jenny&quot;, gender:&quot;Female&quot;, age: 16 ,email:&quot;jenn@bupt.com&quot; }])
+BulkWriteResult({
+        &quot;writeErrors&quot; : [ ],
+        &quot;writeConcernErrors&quot; : [ ],
+        &quot;nInserted&quot; : 5,
+        &quot;nUpserted&quot; : 0,
+        &quot;nMatched&quot; : 0,
+        &quot;nModified&quot; : 0,
+        &quot;nRemoved&quot; : 0,
+        &quot;upserted&quot; : [ ]
+})
+</code></pre> <p>还有更简单的方法，运用你的JS知识就可以了，在此不一一列举，请各位自行探索。</p> <p>之后我们再次查询全部就可以看到所有我们插入的数据了。</p> <pre><code>&gt; db.mailList.find()
+{ &quot;_id&quot; : ObjectId(&quot;5c88edbef1deddeb125f7a1f&quot;), &quot;name&quot; : &quot;Bob&quot;, &quot;gender&quot; : &quot;Male&quot;, &quot;age&quot; : 18, &quot;email&quot; : &quot;bob@sinla.com&quot; }
+.... 这里省略几个人 -- 作者注
+{ &quot;_id&quot; : ObjectId(&quot;5c88edbef1deddeb125f7a23&quot;), &quot;name&quot; : &quot;Jenny&quot;, &quot;gender&quot; : &quot;Female&quot;, &quot;age&quot; : 16, &quot;email&quot; : &quot;jenn@bupt.com&quot; }
+</code></pre> <h2 id="查询-格式化输出"><a href="#查询-格式化输出" aria-hidden="true" class="header-anchor">#</a> 查询 -- 格式化输出</h2> <pre><code>&gt; db.mailList.find().pretty()
+{
+        &quot;_id&quot; : ObjectId(&quot;5c88edbef1deddeb125f7a1f&quot;),
+        &quot;name&quot; : &quot;Bob&quot;,
+        &quot;gender&quot; : &quot;Male&quot;,
+        &quot;age&quot; : 18,
+        &quot;email&quot; : &quot;bob@sinla.com&quot;
+}
+.... 这里省略几个人 -- 作者注
+{
+        &quot;_id&quot; : ObjectId(&quot;5c88edbef1deddeb125f7a23&quot;),
+        &quot;name&quot; : &quot;Jenny&quot;,
+        &quot;gender&quot; : &quot;Female&quot;,
+        &quot;age&quot; : 16,
+        &quot;email&quot; : &quot;jenn@bupt.com&quot;
+}
+</code></pre> <p>是不是就好看多了</p> <h2 id="查询-指定条件进行查询"><a href="#查询-指定条件进行查询" aria-hidden="true" class="header-anchor">#</a> 查询 -- 指定条件进行查询</h2> <pre><code>db.collection.find(query, projection)
+</code></pre> <ul><li>query ：可选，使用查询操作符指定查询条件</li> <li>projection ：可选，使用投影操作符指定返回的键。查询时返回文档中所有键值， 只需省略该参数即可（默认省略）。</li></ul> <table><thead><tr><th style="text-align:center">通常的操作</th> <th style="text-align:center">语法</th> <th>实例</th></tr></thead> <tbody><tr><td style="text-align:center">Equality<br>相等</td> <td style="text-align:center"><code>{&lt;key&gt;:&lt;value&gt;}</code> 或 <br><code>{&lt;key&gt;:{$eq:&lt;value&gt;}}</code></td> <td><code>&gt; db.mailList.find({name: &quot;Bob&quot;}).pretty()</code><br><code>{</code><br><code>&quot;_id&quot; : ObjectId(&quot;5c88edbef1deddeb125f7a1f&quot;)</code><br><code>&quot;name&quot; : &quot;Bob&quot;,</code><br><code>&quot;gender&quot; : &quot;Male&quot;,</code><br><code>&quot;age&quot; : 18,</code><br><code>&quot;email&quot; : &quot;bob@sinla.com&quot;</code><br><code>}</code></td></tr> <tr><td style="text-align:center">Less Than<br>小于</td> <td style="text-align:center"><code>{&lt;key&gt;:{$lt:&lt;value&gt;}}</code></td> <td><code>&gt; db.mailList.find({age:{$lt:16}}).pretty()</code><br><code>{</code><br><code>&quot;_id&quot; : ObjectId(&quot;5c88edbef1deddeb125f7a22&quot;)</code><br><code>&quot;name&quot; : &quot;Jerry&quot;,</code><br><code>&quot;gender&quot; : &quot;Male&quot;,</code><br><code>&quot;age&quot; : 15,</code><br><code>&quot;email&quot; : &quot;jerr@bupt.com&quot;</code><br><code>}</code><br></td></tr> <tr><td style="text-align:center">Less Than Equals<br>小于等于</td> <td style="text-align:center"><code>{&lt;key&gt;:{$lte:&lt;value&gt;}}</code></td> <td><code>&gt; db.mailList.find({age:{$lte:15}}).pretty()</code><br>结果同上</td></tr> <tr><td style="text-align:center">Greater Than<br>大于</td> <td style="text-align:center"><code>{&lt;key&gt;:{$gt:&lt;value&gt;}}</code></td> <td><code>&gt; db.mailList.find({age:{$gt:20}}).pretty()</code><br>没有返回值，因为没有符合条件的</td></tr> <tr><td style="text-align:center">Greater Than Equals<br>大于等于</td> <td style="text-align:center"><code>{&lt;key&gt;:{$gte:&lt;value&gt;}}</code></td> <td><code>db.mailList.find({age:{$gte:20}}).pretty()</code><br>请自行尝试，下同</td></tr> <tr><td style="text-align:center">Not Equals<br>不等于</td> <td style="text-align:center"><code>{&lt;key&gt;:{$ne:&lt;value&gt;}}</code></td> <td><code>db.mailList.find({age:{$ne:18}}).pretty()</code></td></tr></tbody></table> <p>更多查询方式请见 <a href="https://docs.mongodb.com/manual/reference/operator/query/" target="_blank" rel="noopener noreferrer">Query and Projection Operators — MongoDB Manual<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>打印一个人名单</p> <pre><code>&gt; db.mailList.find({},{name: 1, _id: 0}))
+    { &quot;name&quot; : &quot;Bob&quot; }
+    { &quot;name&quot; : &quot;Lili&quot; }
+    { &quot;name&quot; : &quot;Tom&quot; }
+    { &quot;name&quot; : &quot;Jerry&quot; }
+    { &quot;name&quot; : &quot;Jenny&quot; }
+</code></pre> <h2 id="更新"><a href="#更新" aria-hidden="true" class="header-anchor">#</a> 更新</h2> <p>假如Bob改名字了，现在他叫William</p> <pre><code>&gt; db.mailList.update({name: &quot;Bob&quot;},{$set:{name: &quot;William&quot;}})
+WriteResult({ &quot;nMatched&quot; : 1, &quot;nUpserted&quot; : 0, &quot;nModified&quot; : 1 })
+&gt; db.mailList.find({name: &quot;William&quot;}).pretty()
+{
+        &quot;_id&quot; : ObjectId(&quot;5c88edbef1deddeb125f7a1f&quot;),
+        &quot;name&quot; : &quot;William&quot;,
+        &quot;gender&quot; : &quot;Male&quot;,
+        &quot;age&quot; : 18,
+        &quot;email&quot; : &quot;bob@sinla.com&quot;
+}
+</code></pre> <p>新年过了，所有人的年龄都大了一岁</p> <pre><code>&gt; db.mailList.update({},{$inc:{age: 1}},false,true)
+WriteResult({ &quot;nMatched&quot; : 5, &quot;nUpserted&quot; : 0, &quot;nModified&quot; : 5 })
+&gt; db.mailList.find()
+{ &quot;_id&quot; : ObjectId(&quot;5c88edbef1deddeb125f7a1f&quot;), &quot;name&quot; : &quot;William&quot;, &quot;gender&quot; : &quot;Male&quot;, &quot;age&quot; : 19, &quot;email&quot; : &quot;bob@sinla.com&quot; }
+{ &quot;_id&quot; : ObjectId(&quot;5c88edbef1deddeb125f7a20&quot;), &quot;name&quot; : &quot;Lili&quot;, &quot;gender&quot; : &quot;Female&quot;, &quot;age&quot; : 21, &quot;email&quot; : &quot;lili@jojo.org&quot; }
+{ &quot;_id&quot; : ObjectId(&quot;5c88edbef1deddeb125f7a21&quot;), &quot;name&quot; : &quot;Tom&quot;, &quot;gender&quot; : &quot;Male&quot;, &quot;age&quot; : 17, &quot;email&quot; : &quot;tom@sinla.com&quot; }
+{ &quot;_id&quot; : ObjectId(&quot;5c88edbef1deddeb125f7a22&quot;), &quot;name&quot; : &quot;Jerry&quot;, &quot;gender&quot; : &quot;Male&quot;, &quot;age&quot; : 16, &quot;email&quot; : &quot;jerr@bupt.com&quot; }
+{ &quot;_id&quot; : ObjectId(&quot;5c88edbef1deddeb125f7a23&quot;), &quot;name&quot; : &quot;Jenny&quot;, &quot;gender&quot; : &quot;Female&quot;, &quot;age&quot; : 17, &quot;email&quot; : &quot;jenn@bupt.com&quot; }
+</code></pre> <p>可以看到所有人的岁数都加一了。</p> <pre><code>db.collection.update(
+    &lt;query&gt;,
+    &lt;update&gt;,
+    {
+        upsert: &lt;boolean&gt;,
+        multi: &lt;boolean&gt;,
+        writeConcern: &lt;document&gt;
+    }
+)
+</code></pre> <ul><li>query : update的查询条件，类似sql update查询内where后面的。</li> <li>update : update的对象和一些更新的操作符（如$,$inc<a href="https://docs.mongodb.com/manual/reference/operator/update/" target="_blank" rel="noopener noreferrer">...<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>）等，也可以理解为sql update查询内set后面的</li> <li>upsert : 可选，这个参数的意思是，如果不存在update的记录，是否插入objNew,true为插入，默认是false，不插入。</li> <li>multi : 可选，mongodb 默认是false,只更新找到的第一条记录，如果这个参数为true,就把按条件查出来多条记录全部更新。</li> <li>writeConcern :可选，抛出异常的级别。</li></ul> <p>由此可知，所有人的年龄都+1的方式也可以写成<code>db.mailList.update({},{$inc:{age: 1}},{multi:true})</code></p> <h2 id="删除"><a href="#删除" aria-hidden="true" class="header-anchor">#</a> 删除</h2> <pre><code>db.collection.remove(
+    &lt;query&gt;,
+    {
+        justOne: &lt;boolean&gt;,
+        writeConcern: &lt;document&gt;
+    }
+)
+</code></pre> <ul><li>query :（可选）删除的文档的条件。</li> <li>justOne : （可选）如果设为 true 或 1，则只删除一个文档，如果不设置该参数，或使用默认值 false，则删除所有匹配条件的文档。</li> <li>writeConcern :（可选）抛出异常的级别。</li></ul> <p>William由于某种原因，不能再取得联系了。</p> <pre><code>&gt; db.mailList.remove({name: &quot;William&quot;})
+WriteResult({ &quot;nRemoved&quot; : 1 })
+&gt; db.mailList.find().length()
+4
+</code></pre> <p>所有人都联系不上了。。。</p> <pre><code>&gt; db.mailList.remove()
+2019-03-13T20:24:00.307+0800 E QUERY    [js] Error: remove needs a query :
+DBCollection.prototype._parseRemove@src/mongo/shell/collection.js:362:1
+DBCollection.prototype.remove@src/mongo/shell/collection.js:389:18
+@(shell):1:1
+&gt; db.mailList.remove({})
+WriteResult({ &quot;nRemoved&quot; : 4 })
+</code></pre> <h2 id="排序"><a href="#排序" aria-hidden="true" class="header-anchor">#</a> 排序</h2> <p>先回到上面添加的步骤，把人都加回来。</p> <pre><code>&gt; db.mailList.find({},{name: 1,age: 1 , _id: 0}).sort({age: 1})
+{ &quot;name&quot; : &quot;Jerry&quot;, &quot;age&quot; : 15 }
+{ &quot;name&quot; : &quot;Tom&quot;, &quot;age&quot; : 16 }
+{ &quot;name&quot; : &quot;Jenny&quot;, &quot;age&quot; : 16 }
+{ &quot;name&quot; : &quot;Bob&quot;, &quot;age&quot; : 18 }
+{ &quot;name&quot; : &quot;Lili&quot;, &quot;age&quot; : 20 }
+</code></pre> <p>现在就是按照年龄升序排列了。</p></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/XiaoXice/oursparkspaceNginxNodeConfigStudy/edit/doc/Basic/1.4 Mongodb 入门/1.4.2 进行简单的增删改查.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></div> <!----> </div> <!----></div></div>
+    <script src="/oursparkspaceNginxNodeConfigStudy/assets/js/app.fa70d2ae.js" defer></script><script src="/oursparkspaceNginxNodeConfigStudy/assets/js/17.4489aa77.js" defer></script>
+  </body>
+</html>

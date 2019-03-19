@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>2.2.1 Koa 抬手式 | 平台开发文档</title>
+    <meta name="description" content="为了更好的开发">
+    <script type="text/javascript" src="https://s96.cnzz.com/z_stat.php?id=1276670037&amp;web_id=1276670037"></script>
+    
+    <link rel="preload" href="/oursparkspaceNginxNodeConfigStudy/assets/css/0.styles.3c3bcc60.css" as="style"><link rel="preload" href="/oursparkspaceNginxNodeConfigStudy/assets/js/app.fa70d2ae.js" as="script"><link rel="preload" href="/oursparkspaceNginxNodeConfigStudy/assets/js/6.e76a401f.js" as="script"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/10.681ecf30.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/11.271da7e0.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/12.a58c2c56.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/13.f9f6f205.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/14.bfc83ea4.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/15.b52eb4d1.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/16.022d542d.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/17.4489aa77.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/18.370a1b3a.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/19.0bd99501.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/2.7e54c8c4.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/20.e5f3565c.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/21.c46405c7.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/22.c07155e9.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/23.1fcd985e.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/24.dea88fe5.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/25.ac9a030b.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/26.a9450606.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/27.be4f713b.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/28.da5d0cfe.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/29.6243f02e.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/3.992ff33a.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/30.20d154a6.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/31.c2f0a0f7.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/32.4e54a1bf.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/33.f2b3d619.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/34.5badc128.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/35.ed762a5b.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/4.11cb110e.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/5.5753e940.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/7.9cc00c44.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/8.01b35c84.js"><link rel="prefetch" href="/oursparkspaceNginxNodeConfigStudy/assets/js/9.d28ea21d.js">
+    <link rel="stylesheet" href="/oursparkspaceNginxNodeConfigStudy/assets/css/0.styles.3c3bcc60.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/oursparkspaceNginxNodeConfigStudy/" class="home-link router-link-active"><!----> <span class="site-name">平台开发文档</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/oursparkspaceNginxNodeConfigStudy/" class="nav-link">主页</a></div><div class="nav-item"><a href="/oursparkspaceNginxNodeConfigStudy/Basic/" class="nav-link">基础知识</a></div><div class="nav-item"><a href="/oursparkspaceNginxNodeConfigStudy/practice-koa/" class="nav-link router-link-active">后端实践-koa</a></div><div class="nav-item"><a href="/oursparkspaceNginxNodeConfigStudy/practice-express/" class="nav-link">后端实践-express</a></div><div class="nav-item"><a href="/oursparkspaceNginxNodeConfigStudy/front/" class="nav-link">微信小程序前端</a></div><div class="nav-item"><a href="/oursparkspaceNginxNodeConfigStudy/deploy/" class="nav-link">代码部署</a></div> <a href="https://github.com/XiaoXice/oursparkspaceNginxNodeConfigStudy" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/oursparkspaceNginxNodeConfigStudy/" class="nav-link">主页</a></div><div class="nav-item"><a href="/oursparkspaceNginxNodeConfigStudy/Basic/" class="nav-link">基础知识</a></div><div class="nav-item"><a href="/oursparkspaceNginxNodeConfigStudy/practice-koa/" class="nav-link router-link-active">后端实践-koa</a></div><div class="nav-item"><a href="/oursparkspaceNginxNodeConfigStudy/practice-express/" class="nav-link">后端实践-express</a></div><div class="nav-item"><a href="/oursparkspaceNginxNodeConfigStudy/front/" class="nav-link">微信小程序前端</a></div><div class="nav-item"><a href="/oursparkspaceNginxNodeConfigStudy/deploy/" class="nav-link">代码部署</a></div> <a href="https://github.com/XiaoXice/oursparkspaceNginxNodeConfigStudy" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading"><span>2.1 后端分模块实践</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/oursparkspaceNginxNodeConfigStudy/practice-koa/2.1 后端分模块实践/2.1 后端整体设计.html" class="sidebar-link">2.1 后端整体设计</a></li><li><a href="/oursparkspaceNginxNodeConfigStudy/practice-koa/2.1 后端分模块实践/2.1.1 Mongoose 实战.html" class="sidebar-link">2.1.1 Mongoose 实战</a></li><li><a href="/oursparkspaceNginxNodeConfigStudy/practice-koa/2.1 后端分模块实践/2.1.2 Koa 实战.html" class="sidebar-link">2.1.2 Koa实战</a></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading open"><span>2.2 后端架构</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/oursparkspaceNginxNodeConfigStudy/practice-koa/2.2 后端架构/2.2.1 Koa抬手式.html" class="active sidebar-link">2.2.1 Koa 抬手式</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/oursparkspaceNginxNodeConfigStudy/practice-koa/2.2 后端架构/2.2.1 Koa抬手式.html#找到一个空白的路径" class="sidebar-link">找到一个空白的路径</a></li><li class="sidebar-sub-header"><a href="/oursparkspaceNginxNodeConfigStudy/practice-koa/2.2 后端架构/2.2.1 Koa抬手式.html#创建一个子目录作为我们后端程序的workspace" class="sidebar-link">创建一个子目录作为我们后端程序的Workspace</a></li><li class="sidebar-sub-header"><a href="/oursparkspaceNginxNodeConfigStudy/practice-koa/2.2 后端架构/2.2.1 Koa抬手式.html#创建一个npm包" class="sidebar-link">创建一个npm包</a></li><li class="sidebar-sub-header"><a href="/oursparkspaceNginxNodeConfigStudy/practice-koa/2.2 后端架构/2.2.1 Koa抬手式.html#安装依赖" class="sidebar-link">安装依赖</a></li><li class="sidebar-sub-header"><a href="/oursparkspaceNginxNodeConfigStudy/practice-koa/2.2 后端架构/2.2.1 Koa抬手式.html#构建大体框架" class="sidebar-link">构建大体框架</a></li><li class="sidebar-sub-header"><a href="/oursparkspaceNginxNodeConfigStudy/practice-koa/2.2 后端架构/2.2.1 Koa抬手式.html#数据库接口" class="sidebar-link">数据库接口</a></li><li class="sidebar-sub-header"><a href="/oursparkspaceNginxNodeConfigStudy/practice-koa/2.2 后端架构/2.2.1 Koa抬手式.html#添加sdk" class="sidebar-link">添加SDK</a></li></ul></li><li><a href="/oursparkspaceNginxNodeConfigStudy/practice-koa/2.2 后端架构/2.2.2 Mongoose静态方法构建.html" class="sidebar-link">2.2.2 Mongoose静态方法构建</a></li><li><a href="/oursparkspaceNginxNodeConfigStudy/practice-koa/2.2 后端架构/2.2.3 Koa路由和业务逻辑.html" class="sidebar-link">2.2.3 Koa路由和业务逻辑</a></li><li><a href="/oursparkspaceNginxNodeConfigStudy/practice-koa/2.2 后端架构/2.2.4 开发调试.html" class="sidebar-link">2.2.4 开发调试</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="koa-抬手式"><a href="#koa-抬手式" aria-hidden="true" class="header-anchor">#</a> Koa 抬手式</h1> <p>经过了Koa项目的实战，以及各位自己的探索，相信已经了解到了Koa并没有提供很多常用的功能，甚至他都不能解析客户端提交的POST请求之中的信息，也没有路由模块。那么，这一节我们就先来学习Koa项目的抬手式。</p> <h2 id="找到一个空白的路径"><a href="#找到一个空白的路径" aria-hidden="true" class="header-anchor">#</a> 找到一个空白的路径</h2> <p>艺术家创作的时候需要一个洁白的画布，这样子才能更好的展现自己的才华，程序员写项目也是一样的，我们需要一个干净的目录，这样子我们才能发挥自己的创造力。</p> <p>首先，这个路径是绝对干净的，不是之前各种项目的子路径，因为有些工具会向父级目录搜索相关的配置文件，这通常会产生不利的影响。</p> <p>之后这个文件夹也要是空的，最好什么文件都不能存在。</p> <p>最后，这个文件夹，你是拥有完全的权限的，如果你在这个文件夹下的各种操作都会问你要管理员权限，那么除非你真的具有管理员的知识水平，否则最好换一个目录。</p> <h2 id="创建一个子目录作为我们后端程序的workspace"><a href="#创建一个子目录作为我们后端程序的workspace" aria-hidden="true" class="header-anchor">#</a> 创建一个子目录作为我们后端程序的Workspace</h2> <p>作为一个前后端分离的应用，那么前后端的代码也应该是分离的，连接他们的只有事先规定好的协议。</p> <p>当然我们可以通过git工具来完成，这样子我们就可以顺手完成git仓库的建立。</p> <pre><code>git init server
+</code></pre> <p>在这个空白的画布上，这行代码会创建一个叫做server的文件夹，并且将它初始化成为一个空白的git仓库，这个操作就像水墨画中，作画之前需要用水将画布阴湿，是编写代码的第0步。</p> <p>让我们切换到这个server目录之下，在这里创建我们的后端程序。</p> <h2 id="创建一个npm包"><a href="#创建一个npm包" aria-hidden="true" class="header-anchor">#</a> 创建一个npm包</h2> <p>作为一个NodeJs程序，很自然的使用npm来管理你的依赖，当然就需要将自己写的程序也初始化成为一个软件包。</p> <p>当然最好在Github上开一个远程仓库来解决你的代码的备份问题，现在的github已经解除了私有仓库，何乐而不为呢？</p> <p><img src="/oursparkspaceNginxNodeConfigStudy/assets/img/2.2.1emptyGithub.ba65ff01.jpg" alt="2.2.1开一个空github仓库"></p> <p><img src="/oursparkspaceNginxNodeConfigStudy/assets/img/2.2.1howEmptyGithubLike.66203bb6.jpg" alt="2.2.1空仓库是什么样的"></p> <pre><code>$ npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install &lt;pkg&gt;` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (server) mybackend
+version: (1.0.0)
+description: A backend of wechat mini programe.
+entry point: (index.js) app.js
+test command:
+git repository: git@github.com:XiaoXice/LearnKoa-server.git
+keywords: learn koa weichatmini
+author: xice &lt;admin@xice.wang&gt;
+license: (ISC) MIT
+About to write to D:\ourspark\newNginx\src\server\package.json:
+
+{
+&quot;name&quot;: &quot;mybackend&quot;,
+&quot;version&quot;: &quot;1.0.0&quot;,
+&quot;description&quot;: &quot;A backend of wechat mini programe.&quot;,
+&quot;main&quot;: &quot;app.js&quot;,
+&quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+},
+&quot;repository&quot;: {
+    &quot;type&quot;: &quot;git&quot;,
+    &quot;url&quot;: &quot;git+ssh://git@github.com/XiaoXice/LearnKoa-server.git&quot;
+},
+&quot;keywords&quot;: [
+    &quot;learn&quot;,
+    &quot;koa&quot;,
+    &quot;weichatmini&quot;
+],
+&quot;author&quot;: &quot;xice &lt;admin@xice.wang&gt;&quot;,
+&quot;license&quot;: &quot;MIT&quot;,
+&quot;bugs&quot;: {
+    &quot;url&quot;: &quot;https://github.com/XiaoXice/LearnKoa-server/issues&quot;
+},
+&quot;homepage&quot;: &quot;https://github.com/XiaoXice/LearnKoa-server#readme&quot;
+}
+
+
+Is this OK? (yes) yes
+</code></pre> <p>在完成了这些简单的问答填空之后，我们看到了这个文件夹中出现了第一个文件<code>package.json</code>。这证明，我们完成了npm包的构建，现在这个文件夹已经是一个合格的由git管理的npm包了。</p> <h2 id="安装依赖"><a href="#安装依赖" aria-hidden="true" class="header-anchor">#</a> 安装依赖</h2> <pre><code>$ npm i koa
+$ npm i sha1
+$ npm i request
+$ npm i mongoose
+$ npm i koa-body
+$ npm i koa2-cors
+$ npm i koa-logger
+$ npm i koa-router
+$ npm i koa-session2
+</code></pre> <p>分别安装完毕之后，我们看见文件夹中多出了一个文件夹叫做<code>node_modules</code>和一个文件叫做<code>package-lock.json</code>这两个文件都是由<code>npm</code>工具自行管理的，所以我们不应该把他们交给git管理，所有我们创建一个文件叫做<code>.gitignore</code>，并添加内容：</p> <pre><code>node_modules
+package-lock.json
+</code></pre> <p>这样子git就不会管这两个文件(夹)了。</p> <h2 id="构建大体框架"><a href="#构建大体框架" aria-hidden="true" class="header-anchor">#</a> 构建大体框架</h2> <p>首先就是整个程序的入口<code>app.js</code>。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// app.js</span>
+<span class="token keyword">const</span> Koa <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;koa&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> bodyParser <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'koa-body'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> session <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;koa-session2&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> logger <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;koa-logger&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Koa</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token function">session</span><span class="token punctuation">(</span><span class="token punctuation">{</span>key<span class="token punctuation">:</span> <span class="token string">&quot;session&quot;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token function">bodyParser</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    multipart<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    formLimit<span class="token punctuation">:</span> <span class="token string">&quot;1.5mb&quot;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>app<span class="token punctuation">.</span>env <span class="token operator">==</span> <span class="token string">&quot;development&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> cors <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;koa2-cors&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token function">cors</span><span class="token punctuation">(</span><span class="token punctuation">{</span> credentials<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token function">logger</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> next<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>ctx<span class="token punctuation">.</span>request<span class="token punctuation">.</span>method <span class="token operator">==</span> <span class="token string">&quot;POST&quot;</span><span class="token punctuation">)</span> 
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ctx<span class="token punctuation">.</span>request<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>不同Koa中间件的使用方式请自行查阅对应的文档。不过各家模块的名字应该都挺直白的，即便不知道怎么使用，望文生义应该也知道这个中间件是干什么用的。</p> <p>按照惯例，路由文件和具体的业务逻辑应该分别单独放在一个文件夹中，因此我们创建如下目录结构</p> <pre><code>server/
+    - controller/
+        index.js*
+    - router/
+        index.js*
+    app.js
+</code></pre> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// router/index.js</span>
+<span class="token keyword">let</span> Router <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;koa-router&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> route <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Router</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> controller <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;../controller&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+route<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">&quot;/&quot;</span><span class="token punctuation">,</span> controller<span class="token punctuation">.</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> route<span class="token punctuation">;</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// controller/index.js</span>
+<span class="token keyword">let</span> index <span class="token operator">=</span> <span class="token keyword">async</span><span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> next<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ctx<span class="token punctuation">.</span>response<span class="token punctuation">.</span>status <span class="token operator">=</span> <span class="token number">406</span><span class="token punctuation">;</span>
+    ctx<span class="token punctuation">.</span>response<span class="token punctuation">.</span>body <span class="token operator">=</span> <span class="token string">&quot;there's nothing, go back&quot;</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    index
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// app.js</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>route<span class="token punctuation">.</span><span class="token function">routes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> route<span class="token punctuation">.</span><span class="token function">allowedMethods</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="数据库接口"><a href="#数据库接口" aria-hidden="true" class="header-anchor">#</a> 数据库接口</h2> <p>现在我们的后端已经有了一些后端的基本样子,但是还是缺少一些关于数据库方面的操作。这些操作应该独立出来，我们单独新建一个路径：</p> <pre><code>server/
+    - sql/
+        index.js*
+        user.js*
+        message.js*
+        commit.js*
+    ...
+</code></pre> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// sql/index.js</span>
+<span class="token keyword">let</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span>
+    Schema
+<span class="token punctuation">}</span> <span class="token operator">=</span> mongoose<span class="token punctuation">;</span>
+mongoose<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token string">&quot;mongoose://localhost/massage&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    autoIndex<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    useNewUrlParser<span class="token punctuation">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Can't connect to database.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`Details: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>err<span class="token punctuation">.</span>message<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    global<span class="token punctuation">.</span>process<span class="token punctuation">.</span><span class="token function">exit</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> userSchema <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    openID<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        type<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+        index<span class="token punctuation">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    sessionKey<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+    <span class="token comment">// 请参照上下文 补充缺失的部分</span>
+    commitLIst<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+        type<span class="token punctuation">:</span> Schema<span class="token punctuation">.</span>ObjectId<span class="token punctuation">,</span>
+        ref<span class="token punctuation">:</span> <span class="token string">&quot;commit&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> messageSchema <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Schema</span><span class="token punctuation">(</span>
+    <span class="token comment">// 请参照上下样例自行编写message的数据结构</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> commitSchema <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    author<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        type<span class="token punctuation">:</span> Schema<span class="token punctuation">.</span>ObjectId<span class="token punctuation">,</span>
+        ref<span class="token punctuation">:</span> <span class="token string">&quot;user&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    content<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+    followList<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+        type<span class="token punctuation">:</span> Schema<span class="token punctuation">.</span>ObjectId<span class="token punctuation">,</span>
+        ref<span class="token punctuation">:</span> <span class="token string">&quot;commit&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    timestamps<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        createdAt<span class="token punctuation">:</span> <span class="token string">'creationTime'</span><span class="token punctuation">,</span>
+        updatedAt<span class="token punctuation">:</span> <span class="token string">'updateTime'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    userSchema<span class="token punctuation">,</span>
+    commitSchema<span class="token punctuation">,</span>
+    messageSchema
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// sql/user.js</span>
+<span class="token keyword">let</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;mongoose&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> schema <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;./index&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+schema<span class="token punctuation">.</span>userSchema<span class="token punctuation">.</span><span class="token keyword">static</span><span class="token punctuation">(</span><span class="token string">&quot;getUserByOpenId&quot;</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span>openId<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token punctuation">{</span>openID<span class="token punctuation">:</span> openId<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// 此处还应该给每一个查询结构添加一个方法用来验证sessionKey是否有有效。在此先按下不表。</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token string">&quot;user&quot;</span><span class="token punctuation">,</span> schema<span class="token punctuation">.</span>userSchema<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// sql/message.js</span>
+<span class="token comment">// 开头需要引入对应的模块，不再赘述，下同</span>
+schema<span class="token punctuation">.</span>messageSchema<span class="token punctuation">.</span><span class="token keyword">static</span><span class="token punctuation">(</span><span class="token string">&quot;getMessageList&quot;</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span>page<span class="token punctuation">,</span> limt<span class="token punctuation">,</span> sort<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>skip<span class="token punctuation">:</span> <span class="token punctuation">(</span>page <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span>limt<span class="token punctuation">,</span> limt<span class="token punctuation">,</span> sort<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 架构模型化和导出也不再赘述，下同</span>
+</code></pre></div><p><code>commit.js</code>请自行添加一些静态方法并引出模型。</p> <h2 id="添加sdk"><a href="#添加sdk" aria-hidden="true" class="header-anchor">#</a> 添加SDK</h2> <p>创建common文件夹，创建utils文件，使用request模块请求接口，promise化request。</p> <pre><code>server/
+    - common/
+        utils.js*
+</code></pre> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// common/utils.js</span>
+<span class="token keyword">const</span> request <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;request&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">class</span> <span class="token class-name">Ut</span> <span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * promise化request
+     * @param {object} opts 
+     * @return {Promise&lt;[]&gt;}
+     */</span>
+    <span class="token keyword">static</span> <span class="token function">promiseReq</span><span class="token punctuation">(</span>opts <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">    request</span><span class="token punctuation">(</span>opts<span class="token punctuation">,</span> <span class="token punctuation">(</span>e<span class="token punctuation">,</span> r<span class="token punctuation">,</span> d<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token function">reject</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>r<span class="token punctuation">.</span>statusCode <span class="token operator">!=</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token function">reject</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`back statusCode：</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>r<span class="token punctuation">.</span>statusCode<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span> <span class="token function">resolve</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> Ut<span class="token punctuation">;</span>
+</code></pre></div><p>下载后端解密的<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/demo/aes-sample.zip" target="_blank" rel="noopener noreferrer">实例代码<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，解压找到NodeJS的版本，拷贝<code>WXBizDataCrypt.js</code>到<code>common</code>下。</p> <p>基本的目录结构已经成型，下面我们开始编写更多的方法。</p></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/XiaoXice/oursparkspaceNginxNodeConfigStudy/edit/doc/practice-koa/2.2 后端架构/2.2.1 Koa抬手式.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></div> <!----> </div> <!----></div></div>
+    <script src="/oursparkspaceNginxNodeConfigStudy/assets/js/app.fa70d2ae.js" defer></script><script src="/oursparkspaceNginxNodeConfigStudy/assets/js/6.e76a401f.js" defer></script>
+  </body>
+</html>
