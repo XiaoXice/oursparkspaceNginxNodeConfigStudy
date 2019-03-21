@@ -45,7 +45,7 @@ class Wechat {
       }
       let flashCookie = data => {
         console.info("后端返回的信息", data);
-        let cookie = data.header["Set-Cookie"];
+        let cookie = data.header["Set-Cookie"] || data.header["set-cookie"];
         if (cookie) {
           wx.setStorageSync("sessionid", cookie.split(";")[0]);
           this.cookie = cookie;
